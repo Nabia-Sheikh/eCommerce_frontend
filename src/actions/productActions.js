@@ -23,6 +23,9 @@ import {
   PRODUCT_DELETE_REQUEST,
 } from "../constants/productConstants"
 import { logout } from "./userActions"
+import { API_URL } from "../constants/api.js"
+
+axios.defaults.baseURL = API_URL
 
 export const listProducts = (keyword = ' ', pageNumber = ' ') => async (dispatch) => {
   try {
