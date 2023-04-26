@@ -26,6 +26,9 @@ import {
   USER_UPDATE_REQUEST,
   USER_UPDATE_SUCCESS,
 } from "../constants/userConstants"
+import { API_URL } from "../constants/api"
+
+axios.defaults.baseURL = API_URL
 
 export const login = (email, password) => async (dispatch) => {
   try {

@@ -11,6 +11,9 @@ import {
   ORDER_PAY_RESET,
   ORDER_DELIVER_RESET,
 } from "../constants/orderConstants"
+import { API_URL } from "../constants/api"
+
+axios.defaults.baseURL = API_URL
 
 const Order = () => {
   const { id } = useParams()

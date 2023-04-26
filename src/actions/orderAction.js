@@ -20,7 +20,10 @@ import {
   ORDER_PAY_REQUEST,
   ORDER_PAY_SUCCESS,
 } from "../constants/orderConstants"
-import {logout} from "./userActions"
+import { logout } from "./userActions"
+import { API_URL } from "../constants/api"
+
+axios.defaults.baseURL = API_URL
 export const createOrder = (order) => async (dispatch, getState) => {
   try {
     dispatch({

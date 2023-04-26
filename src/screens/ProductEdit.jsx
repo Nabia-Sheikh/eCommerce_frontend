@@ -9,6 +9,9 @@ import FormContainer from "../Component/FormContainer"
 import { listProductDetails, updateProduct } from "../actions/productActions"
 import { useParams } from "react-router-dom"
 import { PRODUCT_UPDATE_RESET } from "../constants/productConstants"
+import { API_URL } from "../constants/api"
+
+axios.defaults.baseURL = API_URL
 
 const ProductEdit = () => {
   const navigate = useNavigate()
